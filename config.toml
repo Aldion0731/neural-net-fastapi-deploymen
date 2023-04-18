@@ -1,0 +1,9 @@
+[server_info]
+host = "127.0.0.1"
+port = 8000
+
+
+[client_info]
+server_url = 'http://localhost:8000'
+prediction_endpoint = '/predict'
+model = 'yolov3'
