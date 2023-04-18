@@ -1,5 +1,4 @@
 from io import BufferedReader
-from pathlib import Path
 
 import requests
 from requests import Response
@@ -7,7 +6,7 @@ from streamlit.runtime.uploaded_file_manager import UploadedFile
 
 
 def get_server_response(
-    url: str, image_file: BufferedReader | UploadedFile, verbose: bool = True
+    url: str, image_file: BufferedReader | UploadedFile, *, verbose: bool = True
 ) -> Response:
     file = {"file": image_file}
     response = requests.post(url, files=file)

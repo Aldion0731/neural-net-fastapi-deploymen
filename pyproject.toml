@@ -1,0 +1,28 @@
+[tool.black]
+line-length = 100
+
+[tool.ruff]
+select = ["ALL"]
+line-length = 100
+
+ignore = [
+"D100",
+"D101",
+"D102",
+"D103",
+"D104",
+"D203",
+"D211",
+"D212",
+"D213",
+"PTH103", # SHOULD POTENTIALLY RE-ENABLE
+"ERA001",
+"PTH123",
+"ANN101",
+"S113",
+"PLR2004",
+"COM812",
+"T201"
+
+
+]

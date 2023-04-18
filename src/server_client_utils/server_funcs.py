@@ -18,7 +18,7 @@ def home() -> str:
 
 
 @app.post("/predict")
-def prediction(model: Models, file: UploadFile = File(...)) -> StreamingResponse:
+def prediction(model: Models, file: UploadFile = File(...)) -> StreamingResponse:  # noqa:  B008
     validate_upload_file(file)
 
     image = convert_bytes_to_image_array(file.file.read())
@@ -27,6 +27,6 @@ def prediction(model: Models, file: UploadFile = File(...)) -> StreamingResponse
 
     img_path = f"{ServerPaths.uploaded_images}/{file.filename}"
     cv2.imwrite(img_path, output_image)
-    file_image = open(img_path, mode="rb")
 
+    file_image = open(img_path, mode="rb")  # noqa:  SIM115
     return StreamingResponse(file_image, media_type="image/jpeg")
