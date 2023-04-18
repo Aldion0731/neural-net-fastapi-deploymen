@@ -4,10 +4,10 @@ from cvlib.object_detection import draw_bbox
 from fastapi import FastAPI, File, UploadFile
 from fastapi.responses import StreamingResponse
 
-from src.config.configurations import ServerPaths
-from src.files.validate_files import validate_upload_file
-from src.images.image_processing import convert_bytes_to_image_array
 from src.models.models import Models
+from src.utils.configurations import ServerPaths
+from src.utils.image_processing import convert_bytes_to_image_array
+from src.utils.validate_files import validate_upload_file
 
 app = FastAPI(title="FastAPI Deployment")
 

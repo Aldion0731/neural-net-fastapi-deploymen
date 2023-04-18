@@ -1,6 +1,6 @@
 import os
 
-from src.config.configurations import ServerPaths
+from src.utils.configurations import ServerPaths
 
 
 def run() -> None:

@@ -1,8 +1,8 @@
 import uvicorn
 
-from src.config.configurations import Config, load_config
 from src.scripts.initialize import run as run_init
 from src.server_client_utils.server_funcs import app
+from src.utils.configurations import Config, load_config
 
 
 def run(config: Config) -> None:

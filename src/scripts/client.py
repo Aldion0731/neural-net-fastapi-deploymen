@@ -1,7 +1,8 @@
 import streamlit as st
 
-from src.config.configurations import Config, load_config
-from src.server_client_utils.client_funcs import convert_bytes_to_image_array, get_server_response
+from src.server_client_utils.client_funcs import get_server_response
+from src.utils.configurations import Config, load_config
+from src.utils.image_processing import convert_bytes_to_image_array
 
 
 def run(config: Config) -> None:
