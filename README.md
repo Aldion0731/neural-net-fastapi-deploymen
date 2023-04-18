@@ -1,6 +1,6 @@
-### YOLOv3 and YOLOv3-Tiny Object Detection with Streamlit
+### YOLOv3 and YOLOv3-Tiny Object Detection via Streamlit
 
-This project builds a web application that performs object detection using `YOLOv3` and `YOLOv3-Tiny` neural networks. It comprises of a server built with `FastAPI` and `uvicorn`, and a web application built with `Streamlit`. The client allows users to upload an image and receive a labeled image with the names of the objects in the image along with bounding boxes around them.
+This project builds a web application that performs object detection using `YOLOv3` and `YOLOv3-Tiny` neural networks. It comprises of a server built with `FastAPI` and `uvicorn`, and a web application built with `Streamlit`. The web application allows users to upload an image and receive a labeled image with the names of the objects within the image, along with bounding boxes around them.
 ___
 ### Installation
 
@@ -18,11 +18,12 @@ git clone git@github.com:Aldion0731/neural-net-fastapi-deployment.git
 ```
 
 ##### Install Dependencies
-___
 
 ```bash
 pipenv sync
 ```
+
+___
 
 ### Usage
 
@@ -39,6 +40,14 @@ python -m src.scripts.server
 python -m streamlit run src/scripts/client.py
 ```
 
+##### Using `just`
+
+```
+just run-server
+just run-client
+# see Justfile for more details
+```
+
 ##### Perform Object Detection
 To perform object detection, follow these steps:
 
@@ -49,4 +58,4 @@ Wait for the model to finish processing the image. Once completed, the labeled i
 ##### Customization
 
 Choosing YOLOv3 or YOLOv3-Tiny
-By default, the web application uses the YOLOv3 neural network for object detection. If you would like to use the YOLOv3-Tiny network instead, set the model parameter in the "clinet_info" section of the config.toml file to "yolov3-tiny"
+By default, the web application uses the YOLOv3 neural network for object detection. If you would like to use the YOLOv3-Tiny network instead, set the model parameter in the "client_info" section of the config.toml file, to "yolov3-tiny"
