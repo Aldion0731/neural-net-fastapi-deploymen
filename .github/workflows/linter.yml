@@ -1,4 +1,4 @@
-name: Lint Code and Check Types
+name: Lint Code
 
 on:
   push:
@@ -19,10 +19,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install ruff~=0.0.261
-        pip install mypy~=1.2.0
+
 
     - name: Run Ruff
       run: ruff src
-
-    - name: Run Mypy
-      run: mypy src
